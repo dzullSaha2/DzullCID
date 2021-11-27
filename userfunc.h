@@ -131,12 +131,12 @@ void GrowtopiaBot::packet_unknown(ENetPacket* packet)
 }
 void GrowtopiaBot::WhenConnected()
 {
-	cout << uname << " Connected to server, creating account!" << endl;
+	cout << uname << " (Dzull)Terhubung ke Server, Membuat Akun:)" << endl;
 }
 
 void GrowtopiaBot::WhenDisconnected()
 {
-	cout << uname << " Disconnected from server..." << endl;
+	cout << uname << " Terputus Dari Server..." << endl;
 	connectClient();
 }
 
