@@ -22,13 +22,13 @@
 
 #pragma once
 //Customing GrowID
-string Growid_acc = "Agreazans";
+string Growid_acc = "NAMA";
 
 //Customing Password
-string Password_acc = "Agreanzs1@";
+string Password_acc = "Password";
 
-//Customing Gmail
-string Gmail_acc = "Gmail";
+//Customing Gmail ( At least put a random gmail. Dont add @gmail.com )
+string Gmail_acc = "sett95b";
 
 //Customing Start From (Account)
 int START_ACC = 1;
@@ -276,7 +276,7 @@ public:
 		SendPacket(2, "action|input\n|text|Solved Captcha: `2" + res, peer);
 	}
 	void appendAcc(string text) {
-		string filename("acc.txt");
+		string filename("DzullCID.txt");
     	fstream file;
     	file.open(filename, std::ios_base::app | std::ios_base::in);
     	if (file.is_open()) file << text << endl;
@@ -313,8 +313,8 @@ public:
 	    			else if (ctx.find("add_label_with_icon|big|`wGrowID GET!``|left|206|") != std::string::npos) {
 	    				string growid = explode("`` created.  Write it and your password", explode("add_textbox|A `wGrowID`` with the log on of `w", ctx)[1])[0];
 	    				string passwr = ""+ Password_acc;
-	    				cout << "Account succesfuly created! GrowID: " << growid << ",Password: " << Password_acc << endl;
-	    				appendAcc("User: " + growid + ",Password: " + Password_acc);
+	    				cout << "Akun Sukses Di Buat! GrowID: " << growid << ",Password: " << Password_acc << endl;
+	    				appendAcc("GrowID: " + growid + ",Password: " + Password_acc);
 	    				enet_peer_disconnect_later(peer, 0);
 	    			}
 	    			//cout << ctx << endl;
